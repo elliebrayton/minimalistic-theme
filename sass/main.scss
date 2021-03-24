@@ -1,3 +1,21 @@
+//COLORS: 
+@import "variables";
+
+$theme-colors: (
+    "primary": $theme-purple, 
+    "secondary": $theme-light-blue, 
+    "info": $theme-indigo, 
+    "light": $theme-grey,
+    "black": $theme-black,
+);
+
+$navbar-light-color: $theme-purple;
+$navbar-light-hover-color: rgba($theme-purple, .6);
+$navbar-light-active-color: rgba($theme-purple, .9);
+  
+
+
+
 @import "../bootstrap/scss/bootstrap.scss";
 
 
