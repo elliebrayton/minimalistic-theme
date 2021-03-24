@@ -1,0 +1,29 @@
+{
+  "name": "minimalistic-theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elliebrayton/minimalistic-theme.git"
+  },
+  "keywords": [
+    "theme",
+    "wordpress"
+  ],
+  "author": "Ellie Brayton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elliebrayton/minimalistic-theme/issues"
+  },
+  "homepage": "https://github.com/elliebrayton/minimalistic-theme#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "dependencies": {
+    "bower": "^1.8.12"
+  }
+}
