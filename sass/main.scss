@@ -39,6 +39,21 @@ $btn-border-radius: 0;
 
 $grid-gutter-width: 40px;
 
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 4),
+    6: ($spacer * 5)
+  ),
+  $spacers
+);
+
 h1{
     font-style: italic;
     letter-spacing: 0.13rem;
@@ -51,16 +66,50 @@ h2{
     position: relative;
 }
 
-$btn-focus-box-shadow: none;
+h2:before{
+    @include h2-decoration;
+}
 
+//BUTTONS 
 .primary-button{
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
     width: 200px;
     font-family: $headings-font-family;
     font-style: italic;
     letter-spacing: 0.07rem;
-    display: inline-block;
     margin: auto;
+    background-color: white;
+    border: $theme-purple 1px solid;
+    padding: 5px;
+    color: $theme-purple;
 }
+
+.primary-button:hover{
+    color: $theme-grey;
+    font-family: $headings-font-family;
+    font-style: italic;
+    font-weight: 300;
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    -moz-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
+    background-color: $theme-purple;
+}
+.primary-button:active{
+    transform: translateX(3px);
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    -moz-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+//ABOUT SECTION
+
+.about-image img{
+    filter: grayscale(100%);
+}
+
 //MEDIA QUERIES
 
 @media(min-width:380px){
