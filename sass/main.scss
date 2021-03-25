@@ -1,5 +1,6 @@
 //COLORS: 
 @import "variables";
+@import "components/featured-posts-overlay";
 
 $theme-colors: (
     "primary": $theme-purple, 
@@ -9,10 +10,98 @@ $theme-colors: (
     "black": $theme-black,
 );
 
-$navbar-light-color: $theme-purple;
-$navbar-light-hover-color: rgba($theme-purple, .6);
-$navbar-light-active-color: rgba($theme-purple, .9);
-  
+$body-color: $theme-black;
+
+
+
+
+//TYPOGRAPHY
+
+$font-family-sans-serif: $body-text;
+$font-family-base: $body-text;
+$font-size-base: 1.2rem;
+$font-weight-base: 300;
+
+$h1-font-size: 3rem;
+$headings-font-weight: 300;
+
+$grid-gutter-width: 40px;
+
+
+h1{
+    font-style: italic;
+    letter-spacing: 0.13rem;
+}
+
+.feature-post-title{
+    color: red;
+}
+
+//MEDIA QUERIES
+
+@media(min-width:380px){
+    .featured-post-image{
+        height: 500px;
+    }
+    
+    .featured-post-image img{
+        height: 500px;
+    }
+}
+
+@media(min-width:540px){
+    .featured-post-image{
+        height: 320px;
+    }
+    
+    .featured-post-image img{
+        height: 320px;
+    }
+}
+
+@media(min-width:769px){
+    .featured-post-image{
+        height: 430px;
+    }
+    
+    .featured-post-image img{
+        height:430px;
+    }
+}
+
+@media(min-width:1000px){
+    .featured-post-image{
+        height: 360px;
+    }
+    
+    .featured-post-image img{
+        height:310px;
+    }
+}
+
+@media(min-width:1280px){
+    .featured-post-image{
+        height: 390px;
+    }
+    
+    .featured-post-image img{
+        height:390px;
+    }
+}
+
+
+
+//NAVBAR
+$navbar-light-color: rgba($theme-black, .8);
+$navbar-light-hover-color: rgba($theme-black, .5);
+
+.nav-link{
+    font-family: $headings-font-family;
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: lowercase;
+}
+
 
 
 
