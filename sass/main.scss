@@ -34,6 +34,9 @@ $h2-font-size: 1.7rem;
 
 $headings-font-weight: 300;
 
+//COMPONENTS
+$btn-border-radius: 0;
+
 $grid-gutter-width: 40px;
 
 h1{
@@ -48,31 +51,16 @@ h2{
     position: relative;
 }
 
-.featured-date{
-    z-index: 10000;
-    position: absolute;
-    top: 19px;
-    left: -10px;
-    height: 50px;
-    width: 50px;
-    background: white;
-    text-align: center;
-    border: 1px solid $theme-black;
-    display: block;
-    font-size: 28px;
-    font-family: $number-font-family;
-    line-height: 28px;
+$btn-focus-box-shadow: none;
+
+.primary-button{
+    width: 200px;
+    font-family: $headings-font-family;
+    font-style: italic;
+    letter-spacing: 0.07rem;
+    display: inline-block;
+    margin: auto;
 }
-
-
-.featured-month{
-    display: block;
-    font-size: 15px;
-    line-height: 15px;
-    text-transform: uppercase;
-}
-
-
 //MEDIA QUERIES
 
 @media(min-width:380px){

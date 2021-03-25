@@ -3,7 +3,7 @@
     <h1 class="blog-title text-primary text-center py-5">Minimalistic Theme</h1>
     <section class="featured-posts-section row">
         <?php
-        //Custom Query
+        //CUSTOM QUERY
         $args = array(
             'post_type'         => 'post',
             'post_status'       => 'published',
@@ -38,13 +38,12 @@
                 </div>
             </a>
         </div>
-
-
-
-        
             <?php } //END WHILE
-            } //END IF STATEMENT 
-            ?>
+        } //END IF STATEMENT 
+        ?>
+        <button class="primary-button btn border-primary my-4">blog posts →</button>
+    </section>
+    <section class="about-section">
 
     </section>
 </div>
