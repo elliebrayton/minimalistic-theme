@@ -6,7 +6,7 @@
 //COLORS: 
 @import "variables";
 @import "mixins";
-@import "components/featured-posts-overlay";
+@import "featured-posts-overlay";
 
 $theme-colors: (
     "primary": $theme-purple, 
@@ -18,7 +18,12 @@ $theme-colors: (
 
 $body-color: $theme-black;
 
-
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1240px
+) !default;
 
 
 //TYPOGRAPHY
@@ -161,6 +166,26 @@ $list-group-item-padding-x: 0;
     filter: grayscale(100%);
 }
 
+.about-image img:hover{
+    filter: grayscale(0%);
+}
+
+//ARCHIVE
+
+.individual-post-image{
+    position: relative;
+}
+
+.individual-post-image img:hover{
+    filter: grayscale(0%);    
+}
+
+.individual-post-image img{
+    object-fit: cover;
+    width: 100%;
+    height: 350px;
+    filter: grayscale(100%);
+}
 //MEDIA QUERIES
 
 @media(min-width:380px){
@@ -190,6 +215,12 @@ $list-group-item-padding-x: 0;
     
     .featured-post-image img{
         height:430px;
+    }
+
+    .individual-post-image img{
+        object-fit: cover;
+        width: 100%;
+        height: 200px;
     }
 }
 
