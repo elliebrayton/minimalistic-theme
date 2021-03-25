@@ -66,16 +66,13 @@ h2{
     position: relative;
 }
 
-h2:before{
-    @include h2-decoration;
-}
-
 //FORM
 .form-heading{
     color: $theme-black;
 }
 
 .form-heading:before{
+    @include h2-decoration;
     background: $theme-black;
 }
 
@@ -107,6 +104,22 @@ $input-border-radius: none;
 $input-border-radius-lg: none;            
 $input-border-radius-sm: none;
 
+$card-spacer-y: .5rem;
+$card-spacer-x: 0;
+$card-border-color: $theme-black;
+$card-bg: white;
+$card-cap-bg: white;
+$list-group-item-padding-y: .5rem;
+$list-group-item-padding-x: 0;
+
+.card{
+    padding: 10px!important;
+    border: none !important;
+}
+.card-header{
+    padding: 10px!important;
+    border: black 1px solid;
+}
 
 //BUTTONS 
 .primary-button{
