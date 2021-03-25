@@ -48,7 +48,7 @@ $spacers: map-merge(
     2: ($spacer * .5),
     3: $spacer,
     4: ($spacer * 1.5),
-    5: ($spacer * 4),
+    5: ($spacer * 3),
     6: ($spacer * 5)
   ),
   $spacers
@@ -69,6 +69,44 @@ h2{
 h2:before{
     @include h2-decoration;
 }
+
+//FORM
+.form-heading{
+    color: $theme-black;
+}
+
+.form-heading:before{
+    background: $theme-black;
+}
+
+input.form-button {
+    background: #444444;
+    border: none;
+    font-family: alga, serif;
+    font-style: italic;
+    color: #E5E5E5;
+    font-weight: 200;
+    width: 149px;
+    letter-spacing: 0.1rem;
+    display: block;
+    padding: 5px;
+    margin-top: 20px;
+    float: right;
+}
+
+label{
+    font-family: $headings-font-family;
+    font-style: italic;
+    color: $theme-black;
+}
+
+$input-border-color: transparent;
+$input-focus-box-shadow: none;
+$input-focus-border-color: $theme-black;
+$input-border-radius: none;             
+$input-border-radius-lg: none;            
+$input-border-radius-sm: none;
+
 
 //BUTTONS 
 .primary-button{
