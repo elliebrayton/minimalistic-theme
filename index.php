@@ -5,12 +5,12 @@
         <?php
         //Custom Query
         $args = array(
-            'post_type' => 'post',
-            'post_status' => 'published',
-            'posts_per_page' => '4',
-            'order' => 'ASC',
-            'orderby' =>'date',
-            'category_name' => 'featured'
+            'post_type'         => 'post',
+            'post_status'       => 'published',
+            'posts_per_page'    => '4',
+            'order'             => 'DESC',
+            'orderby'           =>'date',
+            'category_name'     => 'featured'
         );
 
         $query = new WP_query($args);
@@ -19,16 +19,25 @@
             while($query->have_posts()){
                 $query->the_post(); ?>
 
-    <div class="featured-post col-12 col-sm-6 col-lg-3 mb-4 justify-content-between">
-    <div class="featured-wrapper">
-      <div class="featured-post-image"><?php echo get_the_post_thumbnail($query->ID, 'featured-image'); ?></div>
-      <div class="featured-post-overlay"></div>
-      <div class="featured-content fadeIn">
-          <h2 class="feature-post-title"><?php the_title(); ?></h2>
-          <p class="feature-post-text"><?php the_excerpt(); ?></p>
-      </div>
-    </div>
-  </div>
+        <div class="featured-post col-12 col-sm-6 col-lg-3 mb-4 justify-content-between">
+            <a href="<?php the_permalink(); ?>" target="_blank" class="link-info">
+                <div class="featured-wrapper">
+                    <?php 
+                    $featured_day = get_the_time('d');
+                    ?>
+                    <div class="featured-date m-0 p-0">
+                        <p><?php echo get_the_date($featured_day) ?><span class="featured-month  m-0 p-0"><?php echo get_the_date('M'); ?></span></p>
+                    </div>
+
+                    <div class="featured-post-image"><?php echo get_the_post_thumbnail($query->ID, 'featured-image'); ?></div>
+                    <div class="featured-post-overlay"></div>
+                    <div class="featured-content fadeIn">
+                        <h2 class="featured-post-title"><?php the_title(); ?></h2>
+                        <p class="featured-post-text"><?php echo excerpt(15); ?></p>
+                    </div>
+                </div>
+            </a>
+        </div>
 
 
 
@@ -38,7 +47,6 @@
             ?>
 
     </section>
-
 </div>
 
 <?php get_footer(); ?>

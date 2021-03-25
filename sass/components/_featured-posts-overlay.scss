@@ -25,7 +25,9 @@
   }
   
 .featured-post .featured-post-overlay{
-    background: rgba(0,0,0,0.7);
+    background: #fff;
+    border-bottom: 1px $theme-black solid;
+    border-top: 1px $theme-black solid;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -46,9 +48,9 @@
 
   .featured-content{
     position: absolute;
-    text-align: center;
-    padding-left: 1em;
-    padding-right: 1em;
+    text-align: left;
+    padding-left: 5px;
+    padding-right: 5px;
     width: 100%;
     top: 50%;
     left: 50%;
@@ -72,3 +74,15 @@
   .fadeIn{
     top: 80%;
   }
+
+  .featured-posts-section a,
+  .featured-posts-section a:link,
+  .featured-posts-section a:visited,{
+    color: $theme-black;
+  }
+
+  
+ .featured-post-title:before{
+    @include h2-decoration;
+}
+

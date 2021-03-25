@@ -1,5 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 //COLORS: 
 @import "variables";
+@import "mixins";
 @import "components/featured-posts-overlay";
 
 $theme-colors: (
@@ -23,19 +29,49 @@ $font-size-base: 1.2rem;
 $font-weight-base: 300;
 
 $h1-font-size: 3rem;
+
+$h2-font-size: 1.7rem;
+
 $headings-font-weight: 300;
 
 $grid-gutter-width: 40px;
-
 
 h1{
     font-style: italic;
     letter-spacing: 0.13rem;
 }
 
-.feature-post-title{
-    color: red;
+h2{
+    text-align: left;
+    font-style: italic;
+    color: $theme-purple;
+    position: relative;
 }
+
+.featured-date{
+    z-index: 10000;
+    position: absolute;
+    top: 19px;
+    left: -10px;
+    height: 50px;
+    width: 50px;
+    background: white;
+    text-align: center;
+    border: 1px solid $theme-black;
+    display: block;
+    font-size: 28px;
+    font-family: $number-font-family;
+    line-height: 28px;
+}
+
+
+.featured-month{
+    display: block;
+    font-size: 15px;
+    line-height: 15px;
+    text-transform: uppercase;
+}
+
 
 //MEDIA QUERIES
 
@@ -106,5 +142,4 @@ $navbar-light-hover-color: rgba($theme-black, .5);
 
 
 @import "../bootstrap/scss/bootstrap.scss";
-
 

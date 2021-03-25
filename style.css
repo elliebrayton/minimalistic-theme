@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
 .featured-wrapper {
   position: relative; }
 
@@ -21,7 +26,9 @@
   overflow: hidden; }
 
 .featured-post .featured-post-overlay {
-  background: rgba(0, 0, 0, 0.7);
+  background: #fff;
+  border-bottom: 1px #444444 solid;
+  border-top: 1px #444444 solid;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -39,9 +46,9 @@
 
 .featured-content {
   position: absolute;
-  text-align: center;
-  padding-left: 1em;
-  padding-right: 1em;
+  text-align: left;
+  padding-left: 5px;
+  padding-right: 5px;
   width: 100%;
   top: 50%;
   left: 50%;
@@ -61,12 +68,52 @@
 .fadeIn {
   top: 80%; }
 
+.featured-posts-section a,
+.featured-posts-section a:link,
+.featured-posts-section a:visited {
+  color: #444444; }
+
+.featured-post-title:before {
+  color: #46468C;
+  content: '';
+  position: absolute;
+  top: 3px;
+  display: block;
+  width: 6px;
+  margin-left: -11px;
+  height: 28px;
+  background: #46468C; }
+
 h1 {
   font-style: italic;
   letter-spacing: 0.13rem; }
 
-.feature-post-title {
-  color: red; }
+h2 {
+  text-align: left;
+  font-style: italic;
+  color: #46468C;
+  position: relative; }
+
+.featured-date {
+  z-index: 10000;
+  position: absolute;
+  top: 19px;
+  left: -10px;
+  height: 50px;
+  width: 50px;
+  background: white;
+  text-align: center;
+  border: 1px solid #444444;
+  display: block;
+  font-size: 28px;
+  font-family: eskorte-latin, serif;
+  line-height: 28px; }
+
+.featured-month {
+  display: block;
+  font-size: 15px;
+  line-height: 15px;
+  text-transform: uppercase; }
 
 @media (min-width: 380px) {
   .featured-post-image {
@@ -410,7 +457,7 @@ h1, .h1 {
   font-size: 3rem; }
 
 h2, .h2 {
-  font-size: 2.4rem; }
+  font-size: 1.7rem; }
 
 h3, .h3 {
   font-size: 2.1rem; }
