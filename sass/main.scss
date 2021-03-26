@@ -95,6 +95,7 @@ h2{
     letter-spacing: .2px;
 }
 
+
 //FORM
 .form-heading{
     color: $theme-black;
@@ -209,6 +210,8 @@ li{
     text-decoration: none;
 }
 
+
+
 .individual-post-wrapper:hover{
     transform: translate3D(0,-1px,0) scale(1.03);
     transition: all .4s ease; /* zoom in */
@@ -254,6 +257,15 @@ li{
 .archive-link a:hover {
     font-style: italic;
     text-decoration: none;
+}
+
+//PERMALINK PAGE 
+.post-image img{
+    object-fit: cover;
+    width: 75%;
+    height: auto;
+    display: block;
+    margin: auto;
 }
 
 //MEDIA QUERIES
