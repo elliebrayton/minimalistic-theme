@@ -189,10 +189,7 @@ li{
     list-style-type: none;
 }
 
-//NAVIGATION 
-.post-navigation-container{
-
-}
+//NAVIGATION }
 
 .previous-post-link,
 .previous-post-link a:link,
@@ -276,7 +273,9 @@ li{
 .archive-link a:hover {
     font-style: italic;
     text-decoration: none;
+    color: $theme-grey;
 }
+
 
 //PERMALINK PAGE 
 .post-image img{

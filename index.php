@@ -1,5 +1,12 @@
 
-<?php get_header(); ?>
+<?php 
+
+/*  Template Name: Home Template 
+    Template Post Type: page
+*/  
+    get_header(); 
+
+?>
 <div class="container">
     <h1 class="blog-title text-primary text-center py-6">Minimalistic Theme</h1>
     <section class="featured-posts-section row">
@@ -80,7 +87,7 @@
                     <?php 
                         $tags = get_tags();
                         foreach($tags as $tag){
-                            echo '<li class="list-group-item"><a href="'. get_tag_link($tag->term_id) . '">'. $tag->name.'</a></li>';
+                            echo '<li class="list-group-item archive-link"><a href="'. get_tag_link($tag->term_id) . '">'. $tag->name.'</a></li>';
                         }
                     ?>
                 </ul>

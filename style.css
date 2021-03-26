@@ -287,7 +287,8 @@ li {
 
 .archive-link a:hover {
   font-style: italic;
-  text-decoration: none; }
+  text-decoration: none;
+  color: #E5E5E5; }
 
 .post-image img {
   object-fit: cover;
