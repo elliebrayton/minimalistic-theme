@@ -18,23 +18,22 @@
         <header>
             <!--START NAVIGATION-->
             <nav class="navbar navbar-expand-md navbar-light bg-secondary py-3">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="myNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Index</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Archive</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Contact</a>
-                        </li>
+                <div class="collapse navbar-collapse text-center" id="navbar-content">
+                          <?php $defaults=array(
+                          'theme_location'    => 'main-nav',
+                          'container_id'      => 'navbar-content',
+                          'container'         => '',
+                          'container_id'      => '',
+                          'container_class'   => '',
+                          'menu_id'           => false,
+                          'menu_class'        => 'navbar-nav',
+                          'depth'             => 0,
+                          'add_li_class'      => "nav-item mx-4"
+                      );
+                      wp_nav_menu($defaults);?>
                     </ul>
                 </div>
             </nav>

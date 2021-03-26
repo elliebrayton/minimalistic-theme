@@ -1,6 +1,7 @@
+
 <?php get_header(); ?>
 <div class="container">
-    <h1 class="blog-title text-primary text-center py-5">Minimalistic Theme</h1>
+    <h1 class="blog-title text-primary text-center py-6">Minimalistic Theme</h1>
     <section class="featured-posts-section row">
         <?php
         //CUSTOM QUERY
@@ -9,7 +10,7 @@
             'post_status'       => 'published',
             'posts_per_page'    => '4',
             'order'             => 'DESC',
-            'orderby'           =>'date',
+            'orderby'           =>' date',
             'category_name'     => 'featured'
         );
 
@@ -41,9 +42,50 @@
             <?php } //END WHILE
         } //END IF STATEMENT 
         ?>
-        <button class="primary-button btn border-primary my-4">blog posts →</button>
+        <button class="primary-button my-5">blog posts →</button>
     </section>
-    <section class="about-section">
+    <section class="about-section row mt-4 mb-6">
+        <div class="about-image-wrapper col-12 col-lg-4 pb-4 pb-lg-0 align-self-center">
+            <?php dynamic_sidebar('about-image'); ?>
+        </div>
+        <div class="about-text-wrapper col-12 col-lg-8 align-self-center">
+            <?php dynamic_sidebar('about-text'); ?>
+        </div>
+    </section>
+    <section class="more-content row mb-6">
+        <form class="col-md-7 bg-light p-5">
+            <h2 class="form-heading pb-3">Become a Subscriber</h2>
+            <div class="form-row pb-3">
+                <div class="col-sm-6">            
+                    <label for="text">first name</label>
+                    <input type="text" name="" id="" class="form-control form-control-sm border-none">
+                </div>
+                <div class="col-sm-6">
+                    <label for="text">last name</label>
+                    <input type="text" name="" id="" class="form-control form-control-sm">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-12">
+                    <label for="email">e-mail</label>
+                    <input type="email" class="form-control form-control-sm">
+                </div>
+            </div>
+            <input type="button" value="submit" class="form-button">
+        </form>
+        <div class="card col-md-4 offset-md-1 my-5 my-md-0">
+            <h2 class="card-header text-black rounded-0">Categories</h2>
+            <div class="card-body">
+                <ul class="list-group list-group-flush pl-3 pt-2">
+                    <?php 
+                        $tags = get_tags();
+                        foreach($tags as $tag){
+                            echo '<li class="list-group-item"><a href="'. get_tag_link($tag->term_id) . '">'. $tag->name.'</a></li>';
+                        }
+                    ?>
+                </ul>
+            </div>
+        </div>
 
     </section>
 </div>

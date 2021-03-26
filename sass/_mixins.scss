@@ -9,3 +9,11 @@
     height: 28px;
     background: $theme-purple;
 }
+@mixin secondary-button{
+    color: white;
+    display: block;
+    background: $theme-black;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+}

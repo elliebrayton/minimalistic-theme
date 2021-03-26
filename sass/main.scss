@@ -189,6 +189,30 @@ li{
     list-style-type: none;
 }
 
+//NAVIGATION 
+.post-navigation-container{
+
+}
+
+.previous-post-link,
+.previous-post-link a:link,
+.previous-post-link a:visited{
+    @include secondary-button;
+    width: 150px;
+    padding: 5px 0;
+    display: inline;
+}
+
+.next-post-link,
+.next-post-link a:link,
+.next-post-link a:visited{
+    @include secondary-button;
+    width: 150px;
+    padding: 5px 0;
+    display: inline;
+}
+
+
 //ABOUT SECTION
 
 .about-image img{
@@ -235,15 +259,10 @@ li{
 
 .read-more a:link,
 .read-more a:visited{
-    color: white;
-    display: block;
-    background: $theme-black;
-    font-size: 15px;
+    @include secondary-button;
     width: 100px;
     padding: 1px;
-    text-align: center;
     margin-top: 20px;
-    text-decoration: none;
 }
 
 .archive-link a:link,
