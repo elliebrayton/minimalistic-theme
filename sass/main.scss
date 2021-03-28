@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-//COLORS: 
+//BOOTSTRAP COLORS: 
 @import "variables";
 @import "mixins";
 @import "featured-posts-overlay";
@@ -26,7 +26,7 @@ $container-max-widths: (
 ) !default;
 
 
-//TYPOGRAPHY
+//BOOTSTRAP TYPOGRAPHY
 
 $font-family-sans-serif: $body-text;
 $font-family-base: $body-text;
@@ -41,7 +41,8 @@ $h3-font-size: 1.1rem;
 
 $headings-font-weight: 300;
 
-//COMPONENTS
+
+//BOOTSTRAP COMPONENTS
 $btn-border-radius: 0;
 
 $grid-gutter-width: 40px;
@@ -61,6 +62,32 @@ $spacers: map-merge(
   $spacers
 );
 
+$input-border-color: transparent;
+$input-focus-box-shadow: none;
+$input-focus-border-color: $theme-black;
+$input-border-radius: none;             
+$input-border-radius-lg: none;            
+$input-border-radius-sm: none;
+
+$card-spacer-y: .5rem;
+$card-spacer-x: 0;
+$card-border-color: $theme-black;
+$card-bg: white;
+$card-cap-bg: white;
+$list-group-item-padding-y: .5rem;
+$list-group-item-padding-x: 0;
+
+
+.site {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+  
+.site-content {
+    flex: 1;
+}
+
 h1{
     font-style: italic;
     letter-spacing: 0.13rem;
@@ -72,6 +99,7 @@ h2{
     color: $theme-purple;
     position: relative;
 }
+  
 
 .page-title{
     font-size: 36px;
@@ -126,21 +154,6 @@ label{
     font-style: italic;
     color: $theme-black;
 }
-
-$input-border-color: transparent;
-$input-focus-box-shadow: none;
-$input-focus-border-color: $theme-black;
-$input-border-radius: none;             
-$input-border-radius-lg: none;            
-$input-border-radius-sm: none;
-
-$card-spacer-y: .5rem;
-$card-spacer-x: 0;
-$card-border-color: $theme-black;
-$card-bg: white;
-$card-cap-bg: white;
-$list-group-item-padding-y: .5rem;
-$list-group-item-padding-x: 0;
 
 .card{
     padding: 10px!important;
@@ -285,6 +298,24 @@ li{
     display: block;
     margin: auto;
 }
+
+//FOOTER
+.footer{
+    background: $theme-indigo;
+}
+
+.footer-nav-items{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.footer-nav-items a,
+.footer-nav-items a:link
+.footer-nav-items a:visited{
+    color: $theme-grey;
+}
+
 
 //MEDIA QUERIES
 

@@ -13,7 +13,7 @@
     </head>
     <!--END HEAD-->
     <!--START BODY -->
-    <body <?php body_class(); ?>>
+    <body class="site" <?php body_class(); ?>>
         <!--START HEADER-->
         <header>
             <!--START NAVIGATION-->

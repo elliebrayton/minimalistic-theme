@@ -105,6 +105,14 @@
   line-height: 15px;
   text-transform: uppercase; }
 
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+
+.site-content {
+  flex: 1; }
+
 h1 {
   font-style: italic;
   letter-spacing: 0.13rem; }
@@ -296,6 +304,18 @@ li {
   height: auto;
   display: block;
   margin: auto; }
+
+.footer {
+  background: #293047; }
+
+.footer-nav-items {
+  display: flex;
+  justify-content: center;
+  padding: 20px; }
+
+.footer-nav-items a,
+.footer-nav-items a:link .footer-nav-items a:visited {
+  color: #E5E5E5; }
 
 @media (min-width: 380px) {
   .featured-post-image {

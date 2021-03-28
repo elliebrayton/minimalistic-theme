@@ -7,7 +7,7 @@
     get_header(); 
 
 ?>
-<div class="container">
+<div class="container site-content">
     <h1 class="blog-title text-primary text-center py-6">Minimalistic Theme</h1>
     <section class="featured-posts-section row">
         <?php
@@ -98,4 +98,3 @@
 </div>
 
 <?php get_footer(); ?>
-

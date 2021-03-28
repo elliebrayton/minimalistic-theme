@@ -115,7 +115,7 @@ add_action('widgets_init', 'blank_widgets_init');
 function register_my_menus(){
     register_nav_menus( array(
         'main-nav' => __('Main Navigation'),
-        'footer-nav' => __('footer-nav')
+        'footer-nav' => __('Footer Navigation')
     ));
 }
 
