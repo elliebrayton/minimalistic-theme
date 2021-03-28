@@ -18,7 +18,7 @@
                 <div class="post-image col">
                     <?php echo the_post_thumbnail('large'); ?>
                 </div>
-                <article class="post-content">
+                <article class="post-content px-4 px-sm-0">
                     <p><?php echo get_the_content(); ?></p>
                     <div class="post-details">
                         <p><?php echo 'Written By: ' . get_the_author_meta('display_name'); ?></p>
