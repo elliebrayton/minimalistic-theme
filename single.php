@@ -1,5 +1,4 @@
-<?php /* Template Name: Archive
-*/ ?>
+
 <?php get_header() ?>
 <div class="container">
     <h1 class="page-title text-primary text-left pt-6 pb-4"> <?php $title = get_the_title(); echo $title ?>
